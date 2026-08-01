@@ -37,8 +37,8 @@ The result is a polished blog draft that can be reviewed, edited, and exported.
 
 ## Project files
 
-- [bwa_backend.py](bwa_backend.py) — the LangGraph workflow and blog generation logic
-- [bwa_frontend.py](bwa_frontend.py) — the Streamlit user interface
+- [backend.py](bwa_backend.py) — the LangGraph workflow and blog generation logic
+- [frontend.py](bwa_frontend.py) — the Streamlit user interface
 - [requirements.txt](requirements.txt) — Python package dependencies
 
 ## How the system works
