@@ -2,6 +2,10 @@
 
 A production-style AI blog generation system built with LangGraph, Streamlit, Gemini, and Tavily. The app takes a topic, plans a blog structure, optionally performs web research, writes the content section by section, and can generate supporting images for the final article.
 
+<img width="1082" height="469" alt="Screenshot 2026-08-01 160417 (1)" src="https://github.com/user-attachments/assets/91b19c6c-7057-4554-988c-12096fe2b406" />
+
+
+
 ## What this project does
 
 This project turns a simple prompt like “Explain RAG for developers” into a complete technical blog draft in Markdown. It uses an agent workflow to:
@@ -42,6 +46,12 @@ The result is a polished blog draft that can be reviewed, edited, and exported.
 - [requirements.txt](requirements.txt) — Python package dependencies
 
 ## How the system works
+
+
+
+<img width="1024" height="1536" alt="ChatGPT Image Aug 1, 2026, 02_57_35 PM" src="https://github.com/user-attachments/assets/24ecc9b0-024a-4ec4-bde6-a456ba95cccb" />
+
+
 
 The backend uses a graph-based workflow with these stages:
 
