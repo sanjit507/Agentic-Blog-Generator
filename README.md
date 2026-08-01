@@ -106,7 +106,7 @@ pip install -r requirements.txt
 Start the Streamlit app:
 
 ```bash
-streamlit run bwa_frontend.py
+streamlit run frontend.py
 ```
 
 Then:
