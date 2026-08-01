@@ -1,0 +1,20 @@
+# Blog Writing Agent dependencies
+# (OpenAI removed; uses Google Gemini via langchain-google-genai)
+
+langgraph
+langchain-core
+langchain-community
+langchain-google-genai
+
+# Google GenAI SDK (used for image generation in bwa_backend.py)
+google-genai
+
+pydantic
+python-dotenv
+
+# Web research (Tavily)
+tavily-python
+
+# UI
+streamlit
+pandas

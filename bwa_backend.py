@@ -12,11 +12,17 @@ from pydantic import BaseModel, Field
 from langgraph.graph import StateGraph, START, END
 from langgraph.types import Send
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+# Prefer the workspace-root .env (Agentic AI/.env) so both notebooks and Streamlit
+# pick up the same keys no matter the current working directory.
+_ROOT_ENV = (Path(__file__).resolve().parents[1] / ".env")
+if _ROOT_ENV.exists():
+    load_dotenv(dotenv_path=_ROOT_ENV)
+else:
+    load_dotenv(find_dotenv(usecwd=True))
 
 # ============================================================
 # Blog Writer (Router → (Research?) → Orchestrator → Workers → ReducerWithImages)
@@ -113,7 +119,7 @@ class State(TypedDict):
 # -----------------------------
 # 2) LLM
 # -----------------------------
-llm = ChatOpenAI(model="gpt-4.1-mini")
+llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", temperature=0)
 
 # -----------------------------
 # 3) Router
